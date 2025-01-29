@@ -1,0 +1,33 @@
+get-content
+get-psdrive
+get-childitem
+start .
+copy-item
+move-item
+rename item
+remove-item
+get-item
+new-item
+set-location
+get-location
+get-service
+start-service
+stop-service
+restart-service
+get-process
+start-process
+stop-process
+wait-process
+test-connection
+get-netipaddress
+get-netadapter
+resolve-dnsname
+get-localuser
+remove-localuser
+new-localuser
+get-acl
+set-acl
+select-object
+where-object
+group-object
+sort-object
