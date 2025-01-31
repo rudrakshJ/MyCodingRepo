@@ -26,7 +26,7 @@ void displayLst(list<int> &lst)
 int main()
 {
     list<int> list1; // creates list of 0 length
-    list<int> list2(7); //Empty list of size 7
+    list<int> list2(3); //Empty list of size 3
 
     
     list1.push_back(5);
@@ -53,7 +53,12 @@ int main()
     //Removing elements from list 
     displayLst(list1);
     list1.pop_back(); // removes item from right end
+    cout << "Popped from right : ";
+    displayLst(list1);
+
     list1.pop_front(); //removes item from left end
+    cout << "Popped from left : ";
+    displayLst(list1);
 
     list<int>::iterator it1 = list1.begin();
     cout << "First element : " << *(it1) << endl; //prints first element of list
@@ -67,7 +72,49 @@ int main()
     it1++;
     cout <<  "Third element : " << *(it1) << endl;
 
+
+    //Earlier we declared a list of size 3
+    //We can input its elements by dereferencing the iterator 
+    list<int>::iterator it2 = list2.begin();
+    *(it2) = 3;
+
+    it2++;//now it2 points to second element
+    *(it2) = 1000;
+
+    it2++;//now it2 points to third element
+    *(it2) = 99;
+
+    cout << "list2 : ";
+    displayLst(list2);
+
+    //We can sort the list using sort() function
+    cout << "Sorted list1 : ";
+    list1.sort();
     displayLst(list1);
 
+    //We can also merge two list with merge() method
+    //But it requires the two lists to be sorted
+    //We will now merge list1 and list2
+
+    //list1 was already sorted
+    list2.sort();
+
+    //Now we use the merge method:
+    
+    list1.merge(list2);
+    cout << "Merged List : ";
+    displayLst(list1);
+    //This would merge list1 and list2 into list1 and in ascending order
+
+    //We can even reverse the list using reverse() method
+    list1.reverse();
+    cout << "Reversed list1 : ";
+    displayLst(list1);  
+
+
+    /*
+    Other methods discussed in vectors such as size(), end(), rend(), rbegin(),
+    swap(), clear(), empty(), etc 
+    */
     return 0;
 }
