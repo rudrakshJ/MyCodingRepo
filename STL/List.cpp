@@ -114,7 +114,7 @@ int main()
 
     /*
     Other methods discussed in vectors such as size(), end(), rend(), rbegin(),
-    swap(), clear(), empty(), etc 
+    swap(), clear(), empty(), insert(), front(), back(), etc 
     */
     return 0;
 }
