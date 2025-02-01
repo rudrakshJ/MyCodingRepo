@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-//Earlier when round() is not used inside isArmstrong()
+//Earlier when round() is not used inside isArmstrong() {COMMENTED AT THAT PLACE}
 //This function is correct but dont know why it is causing errors
 //The error an my machiene is that particularly for 153, 
 //in the second iteration of while loop ans comes as 151 rather than 152
@@ -57,7 +57,7 @@ bool isArmstrong(int n)
         digit = n2%10;
         n2 = n2/10;
         cout << pow(digit, num_digits) << endl;
-        ans = ans + round(pow(digit, num_digits)); 
+        ans = ans + round(pow(digit, num_digits)); //Earlier error occured here
         cout << ans << endl;             
     }
     // if (ans == n)
