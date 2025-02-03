@@ -1,0 +1,61 @@
+Some intro to linked list : 
+
+1.) A linked list is a linear collection of data elements called nodes
+in which linear representation is given by links from one node to the next node. 
+2.) Similar to array,  it is a linear collection of data elements of the same type. 
+3.) Different from array,  data elements of linked list are generally not lined in 
+consecutive memory space; instead they are dispersed in various location
+4.) Linked list is a data structure which in turn can be used to implement 
+other data structures. Thus, it acts as building block to implement data structures like 
+stacks, queues and their variations. 
+5.) A linked list can be perceived as a train or a sequence 
+of nodes in which each node contains one or more 
+data fields and a pointer to the next node
+
+Linked list implementation using structures is a self referential data structure 
+since it contains a pointer to itself
+
+Linked list are used when insertion and deletion is priority
+since they allow for faster insertion and deletion. 
+Reason : insertion and deletion of nodes in linked list is just 
+making changes to pointers. However in arrays 
+
+In linked list elements can be inserted indefinately and is limited
+only by memory of computer. However array size is predefined and also
+changing size of arrays is not easy since it has to be resized 
+which is an expensive opration further it is not possible if memory is 
+fragmented.
+
+Also if array has lesser elements than its predefined size, it is a 
+wastage of resources
+
+Linked list allows only for sequencial access to elements on other hand
+array allow for random access. Even the sequencial access is faster in
+arrays due to locality of reference and data caches on other hadn linked list
+receive no benefit from caches.
+
+Meaning of locality of reference and data caches : 
+In arrays, data is stored in contiguous memory location. locality of reference
+means data is stored consecutively. When data is passed to caches, it is done
+in chuncks. Let us say 100 bytes at once. Since array are stored in contiguous 
+locations, access in those locations will be faster since they are stored in cache
+
+Linked list does not benefit from this because its elements can be anywhere an need
+not be the part of chuck of memory passed onto the caches
+
+Arrays:
+In arrays, data is stored in contiguous memory locations. 
+When an array element is accessed, nearby elements are likely to be accessed 
+soon after due to spatial locality. This leads to efficient cache utilization 
+as entire cache lines can be loaded when accessing array elements.
+Example: Accessing array[i] in a loop will typically access consecutive memory
+addresses, making it faster due to spatial locality.
+
+Linked Lists:
+In contrast, linked lists do not store their elements in contiguous 
+memory locations. Each node points to the next node via pointers, meaning
+that nodes can be scattered throughout memory.
+As a result, accessing linked list elements does not exploit spatial locality
+ effectively since accessing one node does not guarantee that its neighbors are 
+ also in the cache. This leads to potential cache misses and slower access times 
+ compared to arrays.
